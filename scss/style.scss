@@ -1,0 +1,27 @@
+@import "components/aside";
+@import "components/footer";
+@import "components/main";
+@import "components/mixins";
+@import "components/variable";
+
+*{
+    background-color: $back_colore ;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $letter_colore ;
+
+}
+.navbar{
+    margin: 0;
+    padding: 0;
+
+ a{
+    color: $letter_colore ;
+    :hover{
+        color: $main_colore ;
+    }
+    
+}
+}
+.navbar a:hover{
+    color: $main_colore ;
+}

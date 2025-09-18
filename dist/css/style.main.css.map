@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../scss/style.scss",
+        "../../scss/components/_aside.scss",
+        "../../scss/components/_footer.scss",
+        "../../scss/components/_main.scss",
+        "../../scss/components/_mixins.scss",
+        "../../scss/components/_variable.scss"
+    ],
+    "names": [],
+    "file": "style.main.css"
+}

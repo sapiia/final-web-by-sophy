@@ -1,0 +1,20 @@
+* {
+  background-color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+}
+.navbar a {
+  color: rgb(255, 255, 255);
+}
+.navbar a :hover {
+  color: orange;
+}
+
+.navbar a:hover {
+  color: orange;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vervia | VR Design</title>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #0a0f1c;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10, 15, 28, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+    nav .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #0ef;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #0ef;
+    }
+    nav input {
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+      padding: 0 80px;
+    }
+    .hero h1 {
+      font-size: 12vw;
+      font-weight: bold;
+      color: #fff;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      opacity: 0.08;
+    }
+    .hero-content {
+      z-index: 2;
+      max-width: 600px;
+    }
+    .hero-content p {
+      margin: 20px 0;
+      color: #ccc;
+    }
+    .btns {
+      display: flex;
+      gap: 20px;
+    }
+    .btns a {
+      padding: 12px 28px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn1 {
+      background: #0ef;
+      color: #000;
+    }
+    .btn1:hover {
+      background: #09c;
+    }
+    .btn2 {
+      border: 2px solid #0ef;
+      color: #0ef;
+    }
+    .btn2:hover {
+      background: #0ef;
+      color: #000;
+    }
+
+    /* Robot Image Placeholder */
+    .hero-img {
+      width: 400px;
+      z-index: 2;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    /* Floating Animation */
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Vervia</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+    <input type="text" placeholder="Search in site">
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Vervia</h1>
+    <div class="hero-content fade-in">
+      <p>Discover innovation in <span style="color:#0ef;">VR Design</span></p>
+      <p>Expanding boundaries through immersive experiences</p>
+      <div class="btns">
+        <a href="#" class="btn1">Explore Now</a>
+        <a href="#" class="btn2">Learn More</a>
+      </div>
+    </div>
+    <img src="https://i.ibb.co/zmZTQ0t/vr-robot.png" alt="VR Robot" class="hero-img fade-in">
+  </section>
+
+  <script>
+    // Fade-in animation on scroll
+    const elements = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      elements.forEach(el => {
+        const pos = el.getBoundingClientRect().top;
+        if (pos < window.innerHeight - 50) {
+          el.classList.add('show');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
