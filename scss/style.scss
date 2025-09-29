@@ -1,27 +1,45 @@
-@import "components/aside";
-@import "components/footer";
-@import "components/main";
-@import "components/mixins";
-@import "components/variable";
+@import "components/_aside";
+@import "components/_footer";
+@import "components/_home";
+@import "components/_nav";
+@import "components/_main";
+@import "components/_mixins";
+@import "components/_variable";
 
-*{
-    background-color: $back_colore ;
-    font-family: Arial, Helvetica, sans-serif;
-    color: $letter_colore ;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-}
-.navbar{
-    margin: 0;
-    padding: 0;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
 
- a{
-    color: $letter_colore ;
-    :hover{
-        color: $main_colore ;
+.pra_home{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-right: 60px;     
+
+    h1{
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #f0f0f0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
     }
-    
-}
-}
-.navbar a:hover{
-    color: $main_colore ;
+
+    p{
+        font-size: 1.2rem;
+        color: #f0f0f0;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        line-height: 1.6;
+        // max-width: 600px;
+        width: 20%;
+    }
+
 }

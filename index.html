@@ -6,45 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <!--  HOME SECTION -->
-    <section id="home">
-        <div class="container">
-            <h1> <b>Welcome to My Portfolio</b></h1>
-            <p>This is a brief introduction about myself and my work.</p>
+    <nav class="navbar">
+        <a href="#" class="nav-item active">HOME</a>
+        <a href="#" class="nav-item">ABOUT</a>
+        <a href="#" class="nav-item">PORTFOLIO</a>
+        <a href="#" class="nav-item">CONTACT</a>
+        <a href="#" class="nav-item">SOCIALS</a>
+    </nav>
+
+    <div class="content">
+        <div class="para-home">
+            <h1>Hey, I'm SOPHY MOEURN</h1>
+            <p>I create immersive digital experiences with cutting-edge web
+technologies. My passion is turning ideas into interactive realities that captivate users.</p>
         </div>
-    </section>
+        
+        <div class="profile_home">
+        </div>
+    </div>
+
+    <script>
+
+        // Add click functionality to nav items
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // Remove active class from all items
+                document.querySelectorAll('.nav-item').forEach(nav => {
+                    nav.classList.remove('active');
+                });
+
+                // Add active class to clicked item
+                item.classList.add('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

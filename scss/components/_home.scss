@@ -1,0 +1,63 @@
+.container{
+    background-color: rgb(173, 76, 76);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+.profile_home{
+    background-image: url(/sophy.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    border: 5px solid rgb(249, 249, 249);
+    box-shadow: 0 4px 8px rgba(145, 101, 175, 0.2);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 60px;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+        z-index: 1;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.861);
+            animation: pulse 1.5s infinite;
+        }
+    }
+
+}
+
+.pra_home{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-right: 60px;     
+
+    h1{
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #f0f0f0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    }
+
+    p{
+        font-size: 1.2rem;
+        color: #f0f0f0;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        line-height: 1.6;
+        max-width: 600px;
+    }
+
+}

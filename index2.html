@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbiting Icons Circular Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            z-index: 10;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+             
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            border-radius: 50%;
+            z-index: -1;
+            background-size: 400%;
+            animation: glowing-border 20s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            z-index: -1;
+        }
+
+        .card-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #4cc9f0;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .card-content {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #b0b0b0;
+        }
+
+        @keyframes glowing-border {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .pulse {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            background: transparent;
+            border: 2px solid rgba(76, 201, 240, 0.4);
+            animation: pulse 3s ease-out infinite;
+            z-index: 0;
+        }
+
+        .pulse:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .pulse:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* Orbiting icons */
+        .orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            animation: rotate 20s linear infinite;
+        }
+
+        .orbit-2 {
+            width: 550px;
+            height: 550px;
+            animation: rotate 25s linear infinite reverse;
+        }
+
+        .orbit-3 {
+            width: 650px;
+            height: 650px;
+            animation: rotate 30s linear infinite;
+        }
+
+        .icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .icon:hover {
+            transform: translate(-50%, -50%) scale(1.2);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            z-index: 20;
+        }
+
+        .icon-1 {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            top: 0;
+            left: 50%;
+        }
+
+        .icon-2 {
+            background: linear-gradient(135deg, #4ecdc4, #88d9d3);
+            top: 50%;
+            right: 0;
+        }
+
+        .icon-3 {
+            background: linear-gradient(135deg, #ffd166, #ffe4a1);
+            bottom: 0;
+            left: 50%;
+        }
+
+        .icon-4 {
+            background: linear-gradient(135deg, #06d6a0, #4ce4b8);
+            top: 50%;
+            left: 0;
+        }
+
+        .icon-5 {
+            background: linear-gradient(135deg, #118ab2, #4fb9db);
+            top: 15%;
+            right: 15%;
+        }
+
+        .icon-6 {
+            background: linear-gradient(135deg, #ef476f, #f57a9a);
+            top: 15%;
+            left: 15%;
+        }
+
+        .icon-7 {
+            background: linear-gradient(135deg, #7209b7, #9d4edd);
+            bottom: 15%;
+            right: 15%;
+        }
+
+        .icon-8 {
+            background: linear-gradient(135deg, #f3722c, #f89665);
+            bottom: 15%;
+            left: 15%;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+        .card{
+            background-image: url(https://i.pinimg.com/736x/6f/54/be/6f54bef0df004007aa3e7924daf7c090.jpg);
+        }
+        .card img{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #4cc9f0;
+        }
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.2;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="stars" id="stars"></div>
+
+        <div class="card-container">
+            <div class="card">
+                <!-- <div class="card-icon"><i class="fas fa-globe-americas"></i></div>
+                <h2 class="card-title">Solar System</h2>
+                <p class="card-content">Icons orbit around this central card like planets around the sun.</p> -->
+                <!-- <div class="card-icon"><i class="fas fa-user"></i></div> -->
+                <img src="https://i.pinimg.com/736x/6f/54/be/6f54bef0df004007aa3e7924daf7c090.jpg" alt="">
+            </div>
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+        </div>
+
+        <!-- First orbit -->
+        <div class="orbit">
+            <div class="icon icon-1"><i class="fas fa-rocket"></i></div>
+            <div class="icon icon-2"><i class="fas fa-satellite"></i></div>
+            <div class="icon icon-3"><i class="fas fa-meteor"></i></div>
+            <div class="icon icon-4"><i class="fas fa-user-astronaut"></i></div>
+        </div>
+
+        <!-- Second orbit -->
+        <div class="orbit orbit-2">
+            <div class="icon icon-5"><i class="fas fa-moon"></i></div>
+            <div class="icon icon-6"><i class="fas fa-star"></i></div>
+            <div class="icon icon-7"><i class="fas fa-comet"></i></div>
+            <div class="icon icon-8"><i class="fas fa-space-shuttle"></i></div>
+        </div>
+
+        <!-- Third orbit -->
+        <div class="orbit orbit-3">
+            <div class="icon icon-1" style="background:linear-gradient(135deg, #8338ec, #a972f0);"><i
+                    class="fas fa-planet-ringed"></i></div>
+            <div class="icon icon-2" style="background:linear-gradient(135deg, #fb5607, #fc8c5e);"><i
+                    class="fas fa-sun"></i></div>
+            <div class="icon icon-3" style="background:linear-gradient(135deg, #3a86ff, #7badff);"><i
+                    class="fas fa-galaxy"></i></div>
+            <div class="icon icon-4" style="background:linear-gradient(135deg, #ff006e, #ff5ca1);"><i
+                    class="fas fa-ufo"></i></div>
+        </div>
+    </div>
+
+    <script>
+        // Create random stars in the background
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 150; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+
+            // Random position
+            const x = Math.random() * 100;
+            const y = Math.random() * 100;
+
+            // Random size
+            const size = Math.random() * 3;
+
+            // Random animation delay
+            const delay = Math.random() * 5;
+
+            star.style.left = `${x}%`;
+            star.style.top = `${y}%`;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.animationDelay = `${delay}s`;
+
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+
+</html>
