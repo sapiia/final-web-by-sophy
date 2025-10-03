@@ -4,47 +4,928 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PORTPHY</title>
+    <link rel="icon" type="image/gif" href="https://i.pinimg.com/originals/91/05/e2/9105e2afae35df516a07fc88d0e60969.gif">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
+    <!-- <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
+    <!-- <div class="home_container">
+         HOME SECTION 
+        <nav class="navbar">
+            <a href="#" class="nav-item active">HOME</a>
+            <a href="#" class="nav-item">ABOUT</a>
+            <a href="#" class="nav-item">PORTFOLIO</a>
+            <a href="#" class="nav-item">CONTACT</a>
+            <a href="#" class="nav-item">SOCIALS</a>
+        </nav>
 
-    <!--  HOME SECTION -->
-    <nav class="navbar">
-        <a href="#" class="nav-item active">HOME</a>
-        <a href="#" class="nav-item">ABOUT</a>
-        <a href="#" class="nav-item">PORTFOLIO</a>
-        <a href="#" class="nav-item">CONTACT</a>
-        <a href="#" class="nav-item">SOCIALS</a>
-    </nav>
+        <div class="content">
+            <div class="para-home">
+                <div class="h1">
+                    <h1><span>Hey, I'm</span> <span class="word">SOPHY MOEURN</span> <span> </span></h1>
+                </div>
+                <p>I create immersive digital experiences with cutting-edge web
+                    technologies. My passion is turning ideas into interactive realities that captivate users.</p>
+            </div>
 
-    <div class="content">
-        <div class="para-home">
-            <h1>Hey, I'm SOPHY MOEURN</h1>
-            <p>I create immersive digital experiences with cutting-edge web
-technologies. My passion is turning ideas into interactive realities that captivate users.</p>
+            <div class="profile_home">
+            </div>
+
+
         </div>
-        
-        <div class="profile_home">
-        </div>
-    </div>
+    </div> -->
 
-    <script>
+        <!-- <script>
 
-        // Add click functionality to nav items
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', (e) => {
-                e.preventDefault();
+            // Add click functionality to nav items
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
 
-                // Remove active class from all items
-                document.querySelectorAll('.nav-item').forEach(nav => {
-                    nav.classList.remove('active');
+                    // Remove active class from all items
+                    document.querySelectorAll('.nav-item').forEach(nav => {
+                        nav.classList.remove('active');
+                    });
+
+                    // Add active class to clicked item
+                    item.classList.add('active');
+                });
+            });
+
+            // Text animation------------------------------
+            const words = [
+                'SOPHY MOEURN',
+                'WEB DEVELOPER',
+                'AWESOME',
+                'WEBSITE',
+            ];
+
+            let counter = 1;
+
+            let interal = setInterval(() => {
+                if (counter >= words.length) {
+                    counter = 0;
+                }
+
+                const nextWord = words[counter];
+
+                document.startViewTransition(() => {
+                    document.querySelector('.word').innerText = nextWord;
                 });
 
-                // Add active class to clicked item
-                item.classList.add('active');
+                counter++;
+            }, 1500)
+
+
+        </script> -->
+
+
+          <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">PORTPHY</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#collection">ABOUT ME</a></li>
+                    <li><a href="#about" class="active">PORTFOLIO</a></li>
+                    <li><a href="#favorite">CONTACTS</a></li>
+                    <li><a href="#favorite">SOCIALS</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Hello, It's me</h1>
+                <h2><span class="heading-accent">Sophy Moeurn</span> | Web Developer</h2>
+                <p>I create immersive digital experiences with cutting-edge web
+                    technologies. My passion is turning ideas into interactive realities that captivate users.</p>
+                <button class="btn-primary">Read more</button>
+            </div>
+            <div class="hero-image">
+                <div class="profile-circle">
+                    <img src="images/sophy.png" alt="Wafi Fadhlurrahman">
+                    <div class="profile-badge">MR. SOPHY</div>
+                    <div class="profile-decoration">COMMUNITY<br>DESIGN</div>
+                </div>
+            </div>
+        </section>
+        <!-- ----------------------------------------- -->
+
+        <div class="about_container">
+            <div class="about-container">
+                <div class="profile-section">
+                    <div class="profile-wrapper">
+                        <div class="profile-glow"></div>
+                        <div class="profile-border">
+                            <div class="profile-inner">
+                                <img src="images/Apple Watch 41mm - 1 (1).png" alt="Profile Picture"
+                                    class="profile-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h1 class="heading">🔆About <span class="heading-accent">Me</span></h1>
+                    <h2 class="subheading">Full Stack Developer!</h2>
+                    <p class="description">
+                        I am a skilled web designer with over 3 years of experience in the industry. My passion lies in
+                        creating captivating website designs and implementing them through frontend development. I take
+                        pride in staying up-to-date with current design trends and leveraging my creativity to produce
+                        visually appealing and user-friendly websites. Throughout my career, I have developed a deep
+                        understanding of user experience (UX) and user interface (UI) principles. By putting myself in
+                        the shoes of the end-users, I strive to create intuitive and seamless browsing experiences. I
+                        believe that a well-designed website should not only look visually appealing but also provide a
+                        smooth and enjoyable interaction for visitors. When starting a new project, I thoroughly
+                        research and analyze the target audience and the client's specific requirements. This enables me
+                        to tailor my designs to meet their expectations and deliver a unique online presence that aligns
+                        with their brand identity.
+                    </p>
+                    <a href="#" class="cta-button">More About Me</a>
+                </div>
+            </div>
+
+            <!-- --------------------------------------- -->
+        </div>
+        <section class="projects-section" id="collection">
+            <div class="project-showcase">
+                <div class="project-card">
+                    <div class="project-grid">
+                        <div class="project-item">
+                            <img src="https://i.pinimg.com/736x/aa/62/62/aa6262ed45d84a3ebdb5129bf33b088b.jpg"
+                                alt="Design 1">
+                        </div>
+                        <div class="project-item">
+                            <img src="https://i.pinimg.com/1200x/57/5b/b9/575bb90f1bc6f04ee939dad3c03b08e1.jpg"
+                                alt="Design 2">
+                        </div>
+                        <div class="project-item">
+                            <img src="https://i.pinimg.com/736x/73/1a/35/731a35b67932f3a72561fe0b5785a358.jpg"
+                                alt="Design 3">
+                        </div>
+                    </div>
+                    <div class="project-label">- My Service -</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-grid">
+                        <div class="project-item">
+                            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWNlcXAyNmkyMnF4bW5lbjMyejcyZWI3OWM1dzkycWlxMnZxb3phbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8WiHip0oNzXqbCM6gJ/giphy.gif"
+                                alt="Design 4">
+                        </div>
+                        <div class="project-item">
+                            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2Fod3J1ZjFqd3B4N2ZoaGl3aTY0NmRxc2J4bXVhNDRyNGpjNzB0diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5gY868p0ytB4LnIN9m/giphy.gif"
+                                alt="Design 5">
+                        </div>
+                        <div class="project-item">
+                            <img src="https://digitalbunker.dev/content/images/2022/10/REC-20220930191248.gif"
+                                alt="Design 6">
+                        </div>
+                    </div>
+                    <div class="project-label">- Real Activities -</div>
+                </div>
+            </div>
+
+            <div class="gallery-info">
+                <h3>If you want, I can give you</h3>
+                <h1 class="heading">My <span class="heading-accent">Services</span></h1>
+                <h2 class="subheading"></h2>
+                <li>
+                    <ul>UX/UI Design</ul>
+                </li>
+                <p>I design clean, intuitive, and user-friendly interfaces that focus on enhancing the overall user
+                    experience. My process includes wireframing, prototyping, and usability testing to make sure the
+                    final product is both functional and visually appealing.</p>
+                <!-- ---------button -->
+                <button class="button">
+                    Apply Now
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <li>
+                    <ul>Web Design</ul>
+                </li>
+                <p>I build responsive and modern websites using HTML, CSS, JavaScript, and frameworks. My goal is to
+                    create fast, secure, and scalable web applications that work seamlessly across all devices.</p>
+                <!-- ---------button -->
+                <button class="button">
+                    Apply Now
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <li>
+                    <ul>Mobile App Develoment</ul>
+                </li>
+                <p>I develop mobile applications with a focus on performance and usability. Whether it’s Android or iOS,
+                    I create apps that are simple to navigate, visually engaging, and tailored to meet user needs.</p>
+                <!-- ---------button -->
+                <button class="button">
+                    Apply Now
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+
+                <!-- --------------------------------------------------------------- -->
+                <a href="#" class="see-all">Take a look</a>
+
+                <div class="designer-badge">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                        <path d="M10 15 L25 5 L40 15 L40 35 L25 45 L10 35 Z" stroke="white" stroke-width="2"
+                            fill="rgba(255,255,255,0.1)" />
+                        <text x="25" y="30" text-anchor="middle" fill="white" font-size="20" font-weight="bold">A</text>
+                    </svg>
+                    <div>
+                        <strong>Free for asking</strong><br>
+                        The best choice for you
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ----my skilll----------------------------------------------------- -->
+        <div class="my-skills-container">
+            <h1 class="heading">⭐️MY <span class="heading-accent">Skills</span></h1>
+            <h2 class="subheading"></h2>
+            <!-- Technical Skills Section -->
+            <div class="my-skills-section my-technical-skills">
+                <h2 class="my-section-title">Technical Skills</h2>
+
+                <div class="my-skill-item">
+                    <div class="my-skill-header">
+                        <div class="my-skill-icon">🌐</div>
+                        <span class="my-skill-name">HTML</span>
+                    </div>
+                    <div class="my-skill-bar-container">
+                        <div class="my-skill-bar" data-progress="90"></div>
+                        <span class="my-skill-percentage">90%</span>
+                    </div>
+                </div>
+
+                <div class="my-skill-item">
+                    <div class="my-skill-header">
+                        <div class="my-skill-icon">🎨</div>
+                        <span class="my-skill-name">CSS</span>
+                    </div>
+                    <div class="my-skill-bar-container">
+                        <div class="my-skill-bar" data-progress="60"></div>
+                        <span class="my-skill-percentage">60%</span>
+                    </div>
+                </div>
+
+                <div class="my-skill-item">
+                    <div class="my-skill-header">
+                        <div class="my-skill-icon">⚡</div>
+                        <span class="my-skill-name">Javascript</span>
+                    </div>
+                    <div class="my-skill-bar-container">
+                        <div class="my-skill-bar" data-progress="85"></div>
+                        <span class="my-skill-percentage">85%</span>
+                    </div>
+                </div>
+
+                <div class="my-skill-item">
+                    <div class="my-skill-header">
+                        <div class="my-skill-icon">🐍</div>
+                        <span class="my-skill-name">Python</span>
+                    </div>
+                    <div class="my-skill-bar-container">
+                        <div class="my-skill-bar" data-progress="50"></div>
+                        <span class="my-skill-percentage">50%</span>
+                    </div>
+                </div>
+
+                <div class="my-skill-item">
+                    <div class="my-skill-header">
+                        <div class="my-skill-icon">⚛️</div>
+                        <span class="my-skill-name">React</span>
+                    </div>
+                    <div class="my-skill-bar-container">
+                        <div class="my-skill-bar" data-progress="75"></div>
+                        <span class="my-skill-percentage">75%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Skills Section -->
+            <div class="my-skills-section my-professional-skills">
+                <h2 class="my-section-title">Professional Skills</h2>
+
+                <div class="my-circular-skills">
+                    <div class="my-circular-skill">
+                        <div class="my-circle-container">
+                            <svg width="140" height="140">
+                                <circle class="my-circle-bg" cx="70" cy="70" r="65"></circle>
+                                <circle class="my-circle-progress" cx="70" cy="70" r="65" data-progress="90"></circle>
+                            </svg>
+                            <div class="my-circle-text">90%</div>
+                        </div>
+                        <span class="my-skill-label">Creativity</span>
+                    </div>
+
+                    <div class="my-circular-skill">
+                        <div class="my-circle-container">
+                            <svg width="140" height="140">
+                                <circle class="my-circle-bg" cx="70" cy="70" r="65"></circle>
+                                <circle class="my-circle-progress" cx="70" cy="70" r="65" data-progress="65"></circle>
+                            </svg>
+                            <div class="my-circle-text">65%</div>
+                        </div>
+                        <span class="my-skill-label">Communication</span>
+                    </div>
+
+                    <div class="my-circular-skill">
+                        <div class="my-circle-container">
+                            <svg width="140" height="140">
+                                <circle class="my-circle-bg" cx="70" cy="70" r="65"></circle>
+                                <circle class="my-circle-progress" cx="70" cy="70" r="65" data-progress="75"></circle>
+                            </svg>
+                            <div class="my-circle-text">75%</div>
+                        </div>
+                        <span class="my-skill-label">Problem Solving</span>
+                    </div>
+
+                    <div class="my-circular-skill">
+                        <div class="my-circle-container">
+                            <svg width="140" height="140">
+                                <circle class="my-circle-bg" cx="70" cy="70" r="65"></circle>
+                                <circle class="my-circle-progress" cx="70" cy="70" r="65" data-progress="85"></circle>
+                            </svg>
+                            <div class="my-circle-text">85%</div>
+                        </div>
+                        <span class="my-skill-label">Teamwork</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- My achievement----------------------------------------------------------------------------- -->
+        <div class="achievement_container">
+            <h1 class="heading">✨My <span class="heading-accent">Achievements</span></h1>
+            <h2 class="subheading"></h2>
+            <p>I have successfully completed projects in web development, where I built responsive and interactive
+                websites that provide smooth user experiences across devices. In mobile development, I created
+                functional and user-friendly applications tailored to meet real-world needs, focusing on performance and
+                accessibility. For UX/UI design, I designed intuitive interfaces and improved user flows by applying
+                design principles, wireframing, and prototyping techniques. These projects not only strengthened my
+                technical and creative skills but also allowed me to deliver solutions that balance both design and
+                functionality.</p>
+            <div class="container-so1">
+                <div class="slider-so1">
+                    <!-- Slide 1 -->
+                    <div class="card-so1">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOG56ZDc4M3lvamJ2c28xZ2lmd3Y2YnZldm1zc3I1eGxmbDNxczB4eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A3biZYgnAvlnZBUMnJ/giphy.gif"
+                            alt="" />
+                        <div class="copy-so1">
+                            <h1>The Best Web</h1>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="card-so1">
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG95dXpiOXJqcXVpZTRja3liem1ybWl0djBsMGxxbjd2NHo1N256eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JUvq5eSYGI6ujU1yyn/giphy.gif"
+                            alt="" />
+                        <div class="copy-so1">
+                            <h1>Standard Web</h1>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="card-so1">
+                        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnNwbDlma21ocjZrYmRtZjN4c3BuMzdnYnprdWkwdGU0a2NlaXpyaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A6r7iEJW4MRDNoXoxJ/giphy.gif"
+                            alt="" />
+                        <div class="copy-so1">
+                            <h1>Advance Web</h1>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="card-so1">
+                        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWxudHA2Z3c1dzY0djlmYTJqYnh0d29tMmwzbGM1OXFubjdtbG9zNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xhxWU7YXkSbUQhuHkP/giphy.gif"
+                            alt="" />
+                        <div class="copy-so1">
+                            <h1 style="color: #4800ff;">Entertainment</h1>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="card-so1">
+                        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWUxbzFyZ2RvYTczYXZ4cnhka3ZidGZ4OW9xeXAzMGgyZG10c3dlYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fAiJPC0WSLrApPXCpr/giphy.gif"
+                            alt="" />
+                        <div class="copy-so1">
+                            <h1>The Result</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Contact form ------------------------------------------------------------------------------------------- -->
+
+        <div class="container-so3 container_edit form_para">
+            <h1 class="heading">📞Let's <span class="heading-accent">Get In Touch</span></h1>
+            <h2 class="subheading"></h2>
+            <p class="form_para_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi harum eum
+                fugiat, maiores doloribus non itaque doloremque tempore, rem tempora impedit enim at veniam veritatis
+                fuga unde? Veritatis, optio doloremque.</p>
+            <span class="big-circle-so"></span>
+            <img src="img/shape.png" class="square-so3" alt="" />
+            <div class="form-so3">
+                <div class="contact-info-so3">
+                    <h3 class="title-so3">Let's get in touch</h3>
+                    <p class="text-so3">
+                        Feel free to reach out anytime using the contact form below. Simply enter your details and
+                        message, and I’ll get back to you as soon as possible. You can also connect with me directly
+                        through email, phone, or social media for faster communication.
+                    </p>
+
+                    <div class="info-so3">
+                        <div class="information-so3">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <p>Borey Sola St.(371),Phnom Penh,Cambodia</p>
+                        </div>
+                        <div class="information-so3">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>moeurnsophy55@gmail.com</p>
+                        </div>
+                        <div class="information-so3">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+855 962 190 403</p>
+                        </div>
+                    </div>
+
+                    <div class="social-media-so3">
+                        <p>Connect with us :</p>
+                        <div class="social-icons-so3">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-so3">
+                    <span class="circle-so3 one-so3"></span>
+                    <span class="circle-so3 two-so3"></span>
+
+                    <form action="index.html" autocomplete="off">
+                        <h3 class="title-so3">Contact us</h3>
+                        <div class="input-container-so3">
+                            <input type="text" name="name" class="input-so3" />
+                            <label for="">Username</label>
+                            <span>Username</span>
+                        </div>
+                        <div class="input-container-so3">
+                            <input type="email" name="email" class="input-so3" />
+                            <label for="">Email</label>
+                            <span>Email</span>
+                        </div>
+                        <div class="input-container-so3">
+                            <input type="tel" name="phone" class="input-so3" />
+                            <label for="">Phone</label>
+                            <span>Phone</span>
+                        </div>
+                        <div class="input-container-so3 textarea-so3">
+                            <textarea name="message" class="input-so3"></textarea>
+                            <label for="">Message</label>
+                            <span>Message</span>
+                        </div>
+                        <input type="submit" value="Send" class="btn-so3" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- map------------------------------------------------------------------ -->
+        <div class="container-so5">
+            <div class="contact-wrapper-so5">
+
+                <div class="contact-info-so5">
+                    <h1 class="heading">📍Find <span class="heading-accent">Me</span></h1>
+                    <h2 class="subheading"></h2>
+                    <p>You can easily find us close to several well-known points in the area, including shops,
+                        restaurants, and service centers. The location is marked on Google Maps for your convenience, so
+                        you won’t have to worry about getting lost.</p>
+
+                    <!-- <div class="contact-item-so5">
+          <div class="icon-box-so5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          </div>
+          <div class="contact-details-so5">
+            <h3>Head Office</h3>
+            <p>Jalan Cempaka Wangi No 22<br>Jakarta - Indonesia</p>
+          </div>
+        </div>
+
+        <div class="contact-item-so5">
+          <div class="icon-box-so5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </div>
+          <div class="contact-details-so5">
+            <h3>Email us</h3>
+            <p>support@yourdomain.tld<br>hello@yourdomain.tld</p>
+          </div>
+        </div> -->
+                    <!-- ---------button -->
+                    <button class="button buton_fix">
+                        Go Now
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div class="contact-item-so5">
+                        <div class="icon-box-s5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                            </svg>
+                        </div>
+                        <div class="contact-details-so5">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-section-so5">
+                    <div class="building-image-so5">
+                        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrj4NjPN5CxtlN--jj3mdAII19V9_W4zm7JU50Ma8dlNnRN1Sbw1RBgUD7LW4GfN6wvSojqC0sCS0NKs7e2URQ3vk3ujnm-KleaP3eW3GBnxpDj8h7bJ6metRq4I6W0BkYrmQ78WA=w408-h306-k-no"
+                            alt="Modern Office Building">
+                    </div>
+                    <div class="map-container-so5">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.245884755306!2d104.88050354767816!3d11.550866309286764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951add5e2cd81%3A0x171e0b69c7c6f7ba!2z4Z6i4Z6E4Z-S4Z6C4Z6A4Z624Z6a4Z6U4Z-J4Z624Z6f4Z664Z6a4Z-J4Z-C4Z6bIOGek-Geu-GemeGemOGeuuGemuGet-GegOGegOGemOGfkuGeluGeu-Geh-Getg!5e0!3m2!1skm!2skh!4v1759454306179!5m2!1skm!2skh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  
+        <section class="expertise-section">
+            <div class="expertise-content">
+                <h1 class="heading">🙏🏻Many<span class="heading-accent"> Thanks</span></h1>
+                    <h2 class="subheading"></h2>
+                <p>Your visit means a lot to me because it shows that the effort I put into my work has reached someone new. Whether you are here to learn more about my background, check out my projects, or simply connect, I’m grateful that you chose to spend your valuable time here.</p>
+            </div>
+            <div class="skills-container">
+                <div class="average-badge">Average : 87%</div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                            <rect x="20" y="15" width="40" height="50" rx="5" stroke="white" stroke-width="3"
+                                fill="rgba(255,255,255,0.1)" />
+                            <path d="M30 25 L35 35 L30 45" stroke="white" stroke-width="2" fill="none" />
+                            <path d="M50 25 L45 35 L50 45" stroke="white" stroke-width="2" fill="none" />
+                        </svg>
+                    </div>
+                    <div class="skill-item">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="25" fill="url(#canvaGradient)" />
+                            <text x="40" y="48" text-anchor="middle" fill="white" font-size="24"
+                                font-weight="bold">C</text>
+                            <defs>
+                                <linearGradient id="canvaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00C4CC" />
+                                    <stop offset="100%" style="stop-color:#7B2BFF" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="skill-item">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                            <rect x="20" y="20" width="40" height="40" rx="8" fill="#31A8FF" />
+                            <text x="40" y="50" text-anchor="middle" fill="white" font-size="28"
+                                font-weight="bold">Lr</text>
+                        </svg>
+                    </div>
+                    <div class="skill-item">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="25" fill="url(#ibisGradient)" />
+                            <path d="M30 35 Q40 25 50 35 Q40 45 30 35" fill="white" />
+                            <circle cx="35" cy="33" r="3" fill="#FF6B6B" />
+                            <circle cx="45" cy="33" r="3" fill="#4ECDC4" />
+                            <defs>
+                                <linearGradient id="ibisGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FF6B6B" />
+                                    <stop offset="50%" style="stop-color:#FFE66D" />
+                                    <stop offset="100%" style="stop-color:#4ECDC4" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        
+    </div>
+      <footer class="footer-so6">
+    <div class="footer-content-so6">
+      <!-- Logo Section -->
+      <div class="logo-section-so6">
+        <div class="logo-so6">
+          <div class="logo-icon-so6"><img style="width: 40px;" src="https://i.pinimg.com/originals/38/29/b2/3829b27df8efdfba7b7dbd7b07d0e68b.gif" alt=""></div>
+          <div class="logo-text-so6">PORTPHY</div>
+        </div>
+        
+        <div class="services-so6">
+          <div class="service-item-so6">Professional</div>
+          <div class="service-item-so6">Responsive</div>
+          <div class="service-item-so6">User-friendly</div>
+        </div>
+      </div>
+
+      <div class="divider-so6"></div>
+
+      <!-- Navigation -->
+      <nav class="nav-links-so6">
+        <a href="#works">HOME</a>
+        <a href="#services">ABOUT ME</a>
+        <a href="#about">PORTFOLIO</a>
+        <a href="#pricing">CONTACTS</a>
+        <a href="#contact">SOCIALS</a>
+      </nav>
+
+      <!-- Social Icons -->
+      <div class="social-icons-so6">
+        <a href="#" class="social-icon-so6" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="3.5"/>
+            <path d="M16 3H8C5.24 3 3 5.24 3 8v8c0 2.76 2.24 5 5 5h8c2.76 0 5-2.24 5-5V8c0-2.76-2.24-5-5-5zm3 13c0 1.65-1.35 3-3 3H8c-1.65 0-3-1.35-3-3V8c0-1.65 1.35-3 3-3h8c1.65 0 3 1.35 3 3v8z"/>
+            <circle cx="17" cy="7" r="1"/>
+          </svg>
+        </a>
+        <a href="#" class="social-icon-so6" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.3 8.6c.6-.4 1.1-.9 1.4-1.5-.5.2-1.1.4-1.7.5.6-.4 1.1-1 1.3-1.7-.6.3-1.2.6-1.9.7-.5-.6-1.3-1-2.2-1-1.7 0-3 1.3-3 3 0 .2 0 .5.1.7-2.5-.1-4.7-1.3-6.2-3.1-.3.4-.4.9-.4 1.5 0 1 .5 1.9 1.3 2.4-.5 0-.9-.1-1.3-.3v.1c0 1.4 1 2.6 2.3 2.9-.2.1-.5.1-.8.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.2 3.1 2.2-1.1.9-2.5 1.4-4.1 1.4-.3 0-.5 0-.8-.1 1.4.9 3.1 1.4 5 1.4 6 0 9.3-5 9.3-9.3v-.4z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-icon-so6" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-icon-so6" aria-label="Search">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom-so6">
+        <div class="footer-links-so6">
+          <a href="#terms">Terms & Conditions</a>
+          <span class="separator-so6">|</span>
+          <a href="#privacy">Privacy Policy</a>
+          <span class="separator-so6">|</span>
+          <a href="#disclosures">Disclosures</a>
+        </div>
+        <p class="copyright-so6">© 2025 port. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
+        });
+
+        // Active navigation highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Parallax effect for background blobs
+        document.addEventListener('mousemove', (e) => {
+            const blobs = document.querySelectorAll('.bg-blob');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            blobs.forEach((blob, index) => {
+                const speed = (index + 1) * 20;
+                const xMove = (x - 0.5) * speed;
+                const yMove = (y - 0.5) * speed;
+                blob.style.transform = `translate(${xMove}px, ${yMove}px)`;
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe project cards and sections
+        document.querySelectorAll('.project-card, .expertise-content, .gallery-info').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+        //-----------------------------------------------------------------------------
+        // Add smooth scroll behavior
+        document.querySelector('.cta-button').addEventListener('click', function (e) {
+            e.preventDefault();
+            // Add your navigation logic here
+            console.log('More About Me clicked');
+        });
+
+        // Optional: Add parallax effect on scroll
+        window.addEventListener('scroll', function () {
+            const scrolled = window.pageYOffset;
+            const profileSection = document.querySelector('.profile-section');
+            if (profileSection) {
+                profileSection.style.transform = `translateY(${scrolled * 0.1}px)`;
+            }
+        });
+        // my skilll-----------------------------------------------------------
+        // Animate on page load
+        window.addEventListener('load', () => {
+            // Animate progress bars
+            const skillBars = document.querySelectorAll('.my-skill-bar');
+            skillBars.forEach(bar => {
+                const progress = bar.getAttribute('data-progress');
+                setTimeout(() => {
+                    bar.style.width = progress + '%';
+                }, 100);
+            });
+
+            // Animate circular progress
+            const circleProgress = document.querySelectorAll('.my-circle-progress');
+            circleProgress.forEach(circle => {
+                const progress = circle.getAttribute('data-progress');
+                const circumference = 2 * Math.PI * 65; // 2πr where r=65
+                const offset = circumference - (progress / 100) * circumference;
+
+                setTimeout(() => {
+                    circle.style.strokeDashoffset = offset;
+                }, 100);
+            });
+        });
+        // my achievement----------------------------------------------------------------
+        // Define a custom cubic easing function
+        CustomEase.create("cubic", "0.83, 0, 0.17, 1");
+
+        let isAnimating = false;
+
+        function splitTextIntoSpans(selector) {
+            let elements = document.querySelectorAll(selector);
+            elements.forEach(element => {
+                let text = element.innerText;
+                let splitText = text
+                    .split("")
+                    .map(char => `<span>${char === " " ? "&nbsp;&nbsp;" : char}</span>`)
+                    .join("");
+                element.innerHTML = splitText;
+            });
+        }
+
+        function initializeCards() {
+            let cards = Array.from(document.querySelectorAll(".card-so1"));
+            gsap.to(cards, {
+                y: i => -15 + 15 * i + "%",
+                z: i => 15 * i,
+                duration: 1,
+                ease: "cubic",
+                stagger: -0.1
+            });
+        }
+
+        function animateNextCard() {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            let slider = document.querySelector(".slider-so1");
+            let cards = Array.from(slider.querySelectorAll(".card-so1"));
+            let lastCard = cards.pop();
+            let nextCard = cards[cards.length - 1];
+
+            gsap.to(lastCard.querySelectorAll("h1 span"), {
+                y: 200,
+                duration: 0.75,
+                ease: "cubic"
+            });
+
+            gsap.to(lastCard, {
+                y: "+=150%",
+                duration: 0.75,
+                ease: "cubic",
+                onComplete: () => {
+                    slider.prepend(lastCard);
+                    initializeCards();
+                    gsap.set(lastCard.querySelectorAll("h1 span"), { y: -200 });
+
+                    setTimeout(() => { isAnimating = false; }, 1000);
+                }
+            });
+
+            gsap.to(nextCard.querySelectorAll("h1 span"), {
+                y: 0,
+                duration: 1,
+                ease: "cubic",
+                stagger: 0.05
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            splitTextIntoSpans(".copy-so1 h1");
+            initializeCards();
+
+            gsap.set("h1 span", { y: -200 });
+            gsap.set(".slider-so1 .card-so1:last-child h1 span", { y: 0 });
+
+            // ✅ Automatically change cards every 4 seconds
+            setInterval(animateNextCard, 4000);
+        });
+        // contact form-------------------------------------------------------
+        const inputs = document.querySelectorAll(".input-so3");
+
+        function focusFunc() {
+            let parent = this.parentNode;
+            parent.classList.add("focus-so3");
+        }
+
+        function blurFunc() {
+            let parent = this.parentNode;
+            if (this.value == "") {
+                parent.classList.remove("focus-so3");
+            }
+        }
+
+        inputs.forEach((input) => {
+            input.addEventListener("focus", focusFunc);
+            input.addEventListener("blur", blurFunc);
         });
     </script>
 </body>
