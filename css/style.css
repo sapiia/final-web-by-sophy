@@ -1692,8 +1692,15 @@ textarea.input-so3 {
 /* footer------------------------------------------------------------------------- */
 .footer-so6 {
   background-color: #1a1d23;
-  width: 100%;
+  width: 100vw;
+  min-height: 100vh;
   padding: 60px 40px 40px;
+  margin: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .footer-content-so6 {
