@@ -6,45 +6,7 @@
 @import "components/_mixins";
 @import "components/_variable";
 
-//         * {
-//             margin: 0;
-//             padding: 0;
-//             box-sizing: border-box;
-//         }
-
-// .home_container {
-//             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-//             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-//             min-height: 100vh;
-//             padding: 2rem;
-//         }
-
-// .pra_home{
-//     text-align: center;
-//     margin-top: 50px;
-//     margin-bottom: 20px;
-//     margin-right: 60px;     
-
-//     h1{
-//         font-size: 2.5rem;
-//         margin-bottom: 10px;
-//         color: #f0f0f0;
-//         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-//     }
-
-//     p{
-//         font-size: 1.2rem;
-//         color: #f0f0f0;
-//         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-//         line-height: 1.6;
-//         // max-width: 600px;
-//         width: 20%;
-//     }
-
-// }
-
- @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
         * {
             margin: 0;
@@ -687,7 +649,7 @@
             }
 
             100% {
-                /* transform: rotate(30deg); */
+                transform: rotate(360deg);
             }
         }
 
@@ -1044,14 +1006,6 @@
             object-fit: cover;
         }
 
-        /* p,
-        a {
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            color: #000;
-        } */
-
         .container-so1 {
             position: relative;
             width: 100%;
@@ -1160,7 +1114,6 @@
         }
 
         .contact-form-so3 {
-            /* background-color: #6b1abc; */
             background: rgba(66, 10, 73, 0.2);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -1534,10 +1487,6 @@
             color: rgb(228, 228, 228);
         }
 
-
-
-
-
         .container-so5 {
             max-width: 1200px;
             margin: 0 auto;
@@ -1588,7 +1537,6 @@
         .icon-box-so5 {
             width: 50px;
             height: 50px;
-            /* background-color: #2ecc71; */
             border-radius: 4px;
             display: flex;
             align-items: center;
@@ -1677,14 +1625,12 @@
             margin-top: 150px;
         }
 
-        /* footer------------------------------------------------------------------------- */
-            .footer-so6 {
+    /* footer------------------------------------------------------------------------- */
+    .footer-so6 {
       background-color: #1a1d23;
       width: 100%;
       padding: 60px 40px 40px;
     }
-
-    .footer-content-so6 {
       max-width: 1200px;
       margin: 0 auto;
     }
